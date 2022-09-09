@@ -1,0 +1,15 @@
+{% block content %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+<div>
+    <input type="text" name="title" placeholder="title">
+</div>
+<div>
+    <textarea name="body" placeholder="Enter Body">Description</textarea>
+</div>
+
+<button type="submit">Submit</button>
+</form>
+
+{% endblock %}

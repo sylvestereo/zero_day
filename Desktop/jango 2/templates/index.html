@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<h1>Blog Page</h1>
+<a href="/add">Add Blog</a>
+{% for all_blog in all_blogs %}
+
+
+<h3>{{ all_blog.title }}</h3>
+
+<p>{{ all_blog.body }}</p>
+<a href="{% url 'edit' blog.id %}">Read more...</a>
+
+
+
+{% endfor %}
+
+{% endblock %}
